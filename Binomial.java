@@ -35,13 +35,10 @@ public class Binomial {
 			for (int j = 0; j <= k; j++)
 				memo[i][j] = -1;
 		}
-		return binomial(n, k, memo);
+		return (int)binomial(n, k, memo);
 	}
 
-	private static long binomial(int n, int k, long[][] memo) {
-		if (memo[n][k] != -1) {
-			return memo[n][k];
-		}
+	private static int binomial(int n, int k, int[][] memo) {
 		// Base case
 		if ((k > n)) {
 		   	memo[n][k] = 0; 
